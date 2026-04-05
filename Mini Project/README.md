@@ -14,7 +14,7 @@
 
 ---
 
-## 📸 Network Topology
+##  Network Topology
 
 ![Network Topology](topology.png)
 
