@@ -221,9 +221,6 @@ Each pool provides: **IP address, subnet mask, default gateway, DNS server (192.
 
 ---
 
-##  Full Report
-
-Full project report available here: [`Pulchowk_Network_Design_Report.docx`](./Pulchowk_Network_Design_Report.docx)
 
 ---
 
