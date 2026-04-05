@@ -22,7 +22,7 @@
 
 ---
 
-## 1. Project Overview
+##  Project Overview
 
 This project presents a complete network design for **IOE Pulchowk Campus, Lalitpur**, simulated in Cisco Packet Tracer. The campus network connects **10 zones**:
 
@@ -38,20 +38,20 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 - Server Farm (centralized services)
 
 ### Key Features
-- ✅ **IP Block** — 192.168.0.0/22 with VLSM across 14 subnets using 6 different prefix lengths
-- ✅ **Multi-area OSPF** — Area 0 backbone + Areas 1, 2, 3 with redundant paths
-- ✅ **3 VLANs** — Faculty (VLAN10), Students (VLAN20), Staff (VLAN30) across 3 switches
-- ✅ **Per-area DHCP** — 3 distributed DHCP servers with ip helper-address relay
-- ✅ **Dual DNS** — Primary DNS1 + Secondary DNS2 on separate subnets
-- ✅ **ISP DNS** — External DNS server in ISP network for public domain resolution
-- ✅ **2 Web Servers** — www.pulchowk.edu.np and labs.pulchowk.edu.np on different subnets
-- ✅ **ISP Connectivity** — Static default route + OSPF redistribution
-- ✅ **Redundant paths** — Area 0 ring (R1-R2-R3-R1) + R4-R5 direct link in Area 1
-- ✅ **Security** — Console, enable, and telnet passwords on all routers
+- **IP Block** — 192.168.0.0/22 with VLSM across 14 subnets using 6 different prefix lengths
+-  **Multi-area OSPF** — Area 0 backbone + Areas 1, 2, 3 with redundant paths
+-  **3 VLANs** — Faculty (VLAN10), Students (VLAN20), Staff (VLAN30) across 3 switches
+-  **Per-area DHCP** — 3 distributed DHCP servers with ip helper-address relay
+-  **Dual DNS** — Primary DNS1 + Secondary DNS2 on separate subnets
+-  **ISP DNS** — External DNS server in ISP network for public domain resolution
+-  **2 Web Servers** — www.pulchowk.edu.np and labs.pulchowk.edu.np on different subnets
+-  **ISP Connectivity** — Static default route + OSPF redistribution
+-  **Redundant paths** — Area 0 ring (R1-R2-R3-R1) + R4-R5 direct link in Area 1
+-  **Security** — Console, enable, and telnet passwords on all routers
 
 ---
 
-## 2. Device Summary
+##  Device Summary
 
 | Device | Model | Role |
 |--------|-------|------|
@@ -78,7 +78,7 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 
 ---
 
-## 3. IP Addressing Plan
+##  IP Addressing Plan
 
 ### Address Block: `192.168.0.0/22`
 - Total usable hosts: **1022**
@@ -87,7 +87,7 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 
 ---
 
-### 3.1 LAN Subnets
+###  LAN Subnets
 
 | Department | Network ID | Subnet Mask | Host Range | Hosts | Area |
 |------------|-----------|-------------|------------|-------|------|
@@ -108,7 +108,7 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 
 ---
 
-### 3.2 Router-to-Router Links (/30 Point-to-Point)
+### Router-to-Router Links (/30 Point-to-Point)
 
 | Link | Network ID | Router A IP | Router B IP | Remark |
 |------|-----------|------------|------------|--------|
@@ -126,7 +126,7 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 
 ---
 
-### 3.3 Server Static IPs
+###  Server Static IPs
 
 | Server | IP Address | Subnet Mask | Gateway | DNS | Purpose |
 |--------|-----------|-------------|---------|-----|---------|
@@ -141,7 +141,7 @@ This project presents a complete network design for **IOE Pulchowk Campus, Lalit
 
 ---
 
-## 4. VLAN Implementation
+##  VLAN Implementation
 
 Three VLANs implemented using **802.1Q trunking** across SW1 → SW2 → SW3 chain. R5 connects to SW1 using **router-on-a-stick**.
 
@@ -156,7 +156,7 @@ Three VLANs implemented using **802.1Q trunking** across SW1 → SW2 → SW3 cha
 
 ---
 
-## 5. OSPF Multi-Area Configuration
+##  OSPF Multi-Area Configuration
 
 | Area | Routers | Coverage |
 |------|---------|----------|
@@ -171,7 +171,7 @@ Three VLANs implemented using **802.1Q trunking** across SW1 → SW2 → SW3 cha
 
 ---
 
-## 6. DHCP Design (Per-Area with Relay)
+##  DHCP Design (Per-Area with Relay)
 
 | Server | IP | Location | Serves |
 |--------|-----|----------|--------|
@@ -184,7 +184,7 @@ Each pool provides: **IP address, subnet mask, default gateway, DNS server (192.
 
 ---
 
-## 7. DNS and Web Servers
+##  DNS and Web Servers
 
 ### DNS Records (configured on DNS1 and DNS2)
 
@@ -204,7 +204,7 @@ Each pool provides: **IP address, subnet mask, default gateway, DNS server (192.
 
 ---
 
-## 8. Security and Management
+##  Security and Management
 
 | Feature | Value |
 |---------|-------|
@@ -217,22 +217,11 @@ Each pool provides: **IP address, subnet mask, default gateway, DNS server (192.
 
 ---
 
-## 9. Testing Results
 
-| Test | Result |
-|------|--------|
-| All router links green | ✅ Verified |
-| PC gets IP via DHCP | ✅ All 13 PCs verified |
-| Inter-area ping (Area 1 → Area 3) | ✅ Working |
-| Ping to ISP (203.0.113.1) | ✅ Working from all PCs |
-| Web browser — www.pulchowk.edu.np | ✅ Page loads |
-| Web browser — labs.pulchowk.edu.np | ✅ Custom page loads |
-| Telnet to routers | ✅ Working |
-| VLAN isolation | ✅ Verified |
 
 ---
 
-## 📄 Full Report
+##  Full Report
 
 Full project report available here: [`Pulchowk_Network_Design_Report.docx`](./Pulchowk_Network_Design_Report.docx)
 
