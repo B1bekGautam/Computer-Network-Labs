@@ -223,6 +223,8 @@ Each pool provides: **IP address, subnet mask, default gateway, DNS server (192.
 
 
 ---
+## Conclusion
+This mini project successfully demonstrates the design and implementation of a complete enterprise-level university campus network for IOE Pulchowk Campus using Cisco Packet Tracer. The network efficiently interconnects ten departments and zones using a hierarchical multi-area OSPF routing architecture with a redundant backbone, ensuring reliable and scalable connectivity across all areas. The implementation of VLSM-based IP addressing with a /22 block, three VLANs across managed switches, per-area DHCP servers with relay agents, dual DNS servers on separate subnets, and dual web servers hosting internal campus portals demonstrates practical application of core networking concepts. The design meets all specified requirements including minimum nine networks with six different subnet sizes, nine routers with three backbone-only routers, at least three OSPF areas, redundant paths in two networks, and ISP connectivity using static routing without dynamic routing between campus and ISP. Through this project, hands-on experience was gained in configuring routers, switches, VLANs, OSPF, DHCP relay, DNS, and HTTP services — bridging the gap between theoretical networking concepts and real-world network design and implementation.
 
 *Submitted to: Department of Electronics and Computer Engineering, Pulchowk Campus, Lalitpur, Nepal*
 
